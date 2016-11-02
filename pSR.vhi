@@ -1,5 +1,5 @@
 
--- VHDL Instantiation Created from source file pSR.vhd -- 19:29:26 11/01/2016
+-- VHDL Instantiation Created from source file pSR.vhd -- 19:38:04 11/01/2016
 --
 -- Notes: 
 -- 1) This instantiation template has been automatically generated using types

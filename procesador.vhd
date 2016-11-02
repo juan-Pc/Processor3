@@ -118,21 +118,22 @@ COMPONENT instructionMemory
 		);
 	END COMPONENT;
 	
-	COMPONENT pSR
+		COMPONENT pSR
 	PORT(
 		nzvc : IN std_logic_vector(3 downto 0);
 		reset : IN std_logic;
-		clk : IN std_logic;          
+		Clock : IN std_logic;          
 		carry : OUT std_logic
 		);
 	END COMPONENT;
-	
+
 	
 	COMPONENT ALU
 	PORT(
 		Crs1 : IN std_logic_vector(31 downto 0);
 		Crs2 : IN std_logic_vector(31 downto 0);
-		ALU_Op : IN std_logic_vector(5 downto 0);          
+		ALU_Op : IN std_logic_vector(5 downto 0);
+      Carry : in STD_LOGIC;		
 		ALU_Out : OUT std_logic_vector(31 downto 0)
 		);
 	END COMPONENT;
@@ -209,7 +210,7 @@ begin
 	Inst_pSR: pSR PORT MAP(
 		nzvc => psrmodifier_psr ,
 		reset =>reset ,
-		Clock =>Clock  ,
+		Clock =>Clock,
 		carry => psrToalu
 	);
 
@@ -220,6 +221,7 @@ begin
 		Crs1 => RFToALU,
 		Crs2 => MUXToALU,
 		ALU_Op => UCtoALU,
+		Carry => psrToalu ,		
 		ALU_Out => ALUToRF
 	);
 	

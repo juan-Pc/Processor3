@@ -1,1 +1,2 @@
 vhdtdtfi -prj Procesador -o C:/Users/Juan/Documents/Procesador32bits/pSR.vhi -module pSR -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work psr.vhd 
+vhdtdtfi -prj Procesador -o C:/Users/Juan/Documents/Procesador32bits/pSR.vhi -module pSR -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work psr.vhd 

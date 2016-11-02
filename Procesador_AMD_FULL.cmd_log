@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Juan/Documents/Procesador32bits/Procesador_AMD_FULL.xst" -ofn "C:/Users/Juan/Documents/Procesador32bits/Procesador_AMD_FULL.syr" 

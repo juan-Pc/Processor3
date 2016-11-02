@@ -1,5 +1,5 @@
-set -tmpdir "D:/Biblioteca/Documents/Procesador/Procesador32/xst/projnav.tmp"
-set -xsthdpdir "D:/Biblioteca/Documents/Procesador/Procesador32/xst"
+set -tmpdir "C:/Users/Juan/Documents/Procesador32bits/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Juan/Documents/Procesador32bits/xst"
 elaborate
 -ifn Sumador.prj
 -ifmt mixed
