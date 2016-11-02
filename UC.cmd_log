@@ -1,0 +1,2 @@
+vhdtdtfi -prj Procesador -o D:/Biblioteca/Documents/Procesador/Procesador32/UC.vhi -module UC -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work UC.vhd 
+vhdtdtfi -prj Procesador -o D:/Biblioteca/Documents/Procesador/Procesador32/UC.vhi -module UC -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work UC.vhd 

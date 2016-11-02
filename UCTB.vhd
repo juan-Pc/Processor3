@@ -2,21 +2,21 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   22:17:28 04/27/2016
+-- Create Date:   18:14:18 04/25/2016
 -- Design Name:   
--- Module Name:   D:/Biblioteca/Documents/Procesador/Procesador32/ProcesadorTB.vhd
+-- Module Name:   D:/Biblioteca/Documents/Procesador/Procesador32/UCTB.vhd
 -- Project Name:  Procesador
 -- Target Device:  
 -- Tool versions:  
 -- Description:   
 -- 
--- VHDL Test Bench Created by ISE for module: Procesador_Intel_Core_i_7_6700k
+-- VHDL Test Bench Created by ISE for module: UC
 -- 
 -- Dependencies:
 -- 
--- Revision:    
+-- Revision:
 -- Revision 0.01 - File Created
--- Additional Comments:   
+-- Additional Comments:
 --
 -- Notes: 
 -- This testbench has been automatically generated using types std_logic and
@@ -32,59 +32,56 @@ USE ieee.std_logic_1164.ALL;
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
  
-ENTITY ProcesadorTB IS
-END ProcesadorTB;
+ENTITY UCTB IS
+END UCTB;
  
-ARCHITECTURE behavior OF ProcesadorTB IS 
+ARCHITECTURE behavior OF UCTB IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT Procesador_AMD_FULL
+    COMPONENT UC
     PORT(
-         Clock : IN  std_logic;
-         Reset : IN  std_logic;
-         OutProcesador : OUT  std_logic_vector(31 downto 0)
+         OP : IN  std_logic_vector(1 downto 0);
+         OP3 : IN  std_logic_vector(5 downto 0);
+         ALU_OP : OUT  std_logic_vector(5 downto 0)
         );
     END COMPONENT;
     
 
    --Inputs
-   signal Clock : std_logic := '0';
-   signal Reset : std_logic := '0';
+   signal OP : std_logic_vector(1 downto 0) := (others => '0');
+   signal OP3 : std_logic_vector(5 downto 0) := (others => '0');
 
  	--Outputs
-   signal OutProcesador : std_logic_vector(31 downto 0);
-
-   -- Clock period definitions
-   constant Clock_period : time := 10 ns;
+   signal ALU_OP : std_logic_vector(5 downto 0);
+   -- No clocks detected in port list. Replace <clock> below with 
+   -- appropriate port name 
  
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: Procesador_AMD_FULL PORT MAP (
-          Clock => Clock,
-          Reset => Reset,
-          OutProcesador => OutProcesador
-        );
-
-   -- Clock process definitions
-   Clock_process :process
-   begin
-		Clock <= '0';
-		wait for Clock_period/2;
-		Clock <= '1';
-		wait for Clock_period/2;
-   end process;
- 
+   uut: UC PORT MAP (
+          OP => OP,
+          OP3 => OP3,
+          ALU_OP => ALU_OP
+        ); 
 
    -- Stimulus process
    stim_proc: process
-   begin	
-		Reset <= '1';
-      -- hold reset state for 100 ns.
-      wait for 30 ns;	
-		Reset <= '0';	
-
+   begin		
+      wait for 100 ns;
+		OP <= "10";
+		OP3 <= "000100";
+		
+		
+		wait for 100 ns;
+		OP <="10";
+		OP3 <="000110";
+		
+		
+		wait for 100 ns;
+		OP <="10";
+		OP3 <="000001";
       wait;
    end process;
 

@@ -2,21 +2,21 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   22:17:28 04/27/2016
+-- Create Date:   18:42:04 04/25/2016
 -- Design Name:   
--- Module Name:   D:/Biblioteca/Documents/Procesador/Procesador32/ProcesadorTB.vhd
+-- Module Name:   D:/Biblioteca/Documents/Procesador/Procesador32/SEUTB.vhd
 -- Project Name:  Procesador
 -- Target Device:  
 -- Tool versions:  
 -- Description:   
 -- 
--- VHDL Test Bench Created by ISE for module: Procesador_Intel_Core_i_7_6700k
+-- VHDL Test Bench Created by ISE for module: SEU
 -- 
 -- Dependencies:
 -- 
--- Revision:    
+-- Revision:
 -- Revision 0.01 - File Created
--- Additional Comments:   
+-- Additional Comments:
 --
 -- Notes: 
 -- This testbench has been automatically generated using types std_logic and
@@ -32,58 +32,48 @@ USE ieee.std_logic_1164.ALL;
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
  
-ENTITY ProcesadorTB IS
-END ProcesadorTB;
+ENTITY SEUTB IS
+END SEUTB;
  
-ARCHITECTURE behavior OF ProcesadorTB IS 
+ARCHITECTURE behavior OF SEUTB IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT Procesador_AMD_FULL
+    COMPONENT SEU
     PORT(
-         Clock : IN  std_logic;
-         Reset : IN  std_logic;
-         OutProcesador : OUT  std_logic_vector(31 downto 0)
+         simm13 : IN  std_logic_vector(12 downto 0);
+         seu32 : OUT  std_logic_vector(31 downto 0)
         );
     END COMPONENT;
     
 
    --Inputs
-   signal Clock : std_logic := '0';
-   signal Reset : std_logic := '0';
+   signal simm13 : std_logic_vector(12 downto 0) := (others => '0');
 
  	--Outputs
-   signal OutProcesador : std_logic_vector(31 downto 0);
-
-   -- Clock period definitions
-   constant Clock_period : time := 10 ns;
+   signal seu32 : std_logic_vector(31 downto 0);
+   -- No clocks detected in port list. Replace <clock> below with 
+   -- appropriate port name 
+ 
  
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: Procesador_AMD_FULL PORT MAP (
-          Clock => Clock,
-          Reset => Reset,
-          OutProcesador => OutProcesador
+   uut: SEU PORT MAP (
+          simm13 => simm13,
+          seu32 => seu32
         );
 
-   -- Clock process definitions
-   Clock_process :process
-   begin
-		Clock <= '0';
-		wait for Clock_period/2;
-		Clock <= '1';
-		wait for Clock_period/2;
-   end process;
  
 
    -- Stimulus process
    stim_proc: process
-   begin	
-		Reset <= '1';
+   begin		
       -- hold reset state for 100 ns.
-      wait for 30 ns;	
-		Reset <= '0';	
+      wait for 100 ns;	
+
+
+      -- insert stimulus here 
 
       wait;
    end process;

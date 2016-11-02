@@ -2,21 +2,21 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   22:17:28 04/27/2016
+-- Create Date:   15:40:14 04/23/2016
 -- Design Name:   
--- Module Name:   D:/Biblioteca/Documents/Procesador/Procesador32/ProcesadorTB.vhd
+-- Module Name:   D:/Biblioteca/Documents/Procesador/Procesador32/SumadorTB.vhd
 -- Project Name:  Procesador
 -- Target Device:  
 -- Tool versions:  
 -- Description:   
 -- 
--- VHDL Test Bench Created by ISE for module: Procesador_Intel_Core_i_7_6700k
+-- VHDL Test Bench Created by ISE for module: Sumador
 -- 
 -- Dependencies:
 -- 
--- Revision:    
+-- Revision:
 -- Revision 0.01 - File Created
--- Additional Comments:   
+-- Additional Comments:
 --
 -- Notes: 
 -- This testbench has been automatically generated using types std_logic and
@@ -32,58 +32,52 @@ USE ieee.std_logic_1164.ALL;
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
  
-ENTITY ProcesadorTB IS
-END ProcesadorTB;
+ENTITY SumadorTB IS
+END SumadorTB;
  
-ARCHITECTURE behavior OF ProcesadorTB IS 
+ARCHITECTURE behavior OF SumadorTB IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT Procesador_AMD_FULL
+    COMPONENT Sumador
     PORT(
-         Clock : IN  std_logic;
-         Reset : IN  std_logic;
-         OutProcesador : OUT  std_logic_vector(31 downto 0)
+         Incremento : IN  std_logic_vector(31 downto 0);
+         Direccion : IN  std_logic_vector(31 downto 0);
+         NuevaDireccion : OUT  std_logic_vector(31 downto 0)
         );
     END COMPONENT;
     
 
    --Inputs
-   signal Clock : std_logic := '0';
-   signal Reset : std_logic := '0';
+   signal Incremento : std_logic_vector(31 downto 0) := (others => '0');
+   signal Direccion : std_logic_vector(31 downto 0) := (others => '0');
 
  	--Outputs
-   signal OutProcesador : std_logic_vector(31 downto 0);
-
-   -- Clock period definitions
-   constant Clock_period : time := 10 ns;
+   signal NuevaDireccion : std_logic_vector(31 downto 0);
+   -- No clocks detected in port list. Replace <clock> below with 
+   -- appropriate port name 
  
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: Procesador_AMD_FULL PORT MAP (
-          Clock => Clock,
-          Reset => Reset,
-          OutProcesador => OutProcesador
+   uut: Sumador PORT MAP (
+          Incremento => Incremento,
+          Direccion => Direccion,
+          NuevaDireccion => NuevaDireccion
         );
-
-   -- Clock process definitions
-   Clock_process :process
-   begin
-		Clock <= '0';
-		wait for Clock_period/2;
-		Clock <= '1';
-		wait for Clock_period/2;
-   end process;
  
 
    -- Stimulus process
    stim_proc: process
-   begin	
-		Reset <= '1';
+   begin		
       -- hold reset state for 100 ns.
-      wait for 30 ns;	
-		Reset <= '0';	
+		wait for 30 ns;
+      -- insert stimulus here 
+		Incremento <= x"00000001";
+		Direccion <= x"00000002";
+		wait for 30 ns;
+		Incremento <= x"00000001";
+			
 
       wait;
    end process;
