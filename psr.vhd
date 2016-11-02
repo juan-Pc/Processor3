@@ -32,19 +32,19 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity pSR is
     Port ( nzvc : in  STD_LOGIC_VECTOR (3 downto 0);
            reset : in  STD_LOGIC;
-           clk : in  STD_LOGIC;
+           Clock : in  STD_LOGIC;
            carry : out  STD_LOGIC);
 end pSR;
 
 architecture Behavioral of pSR is
 
 begin
-process(reset,clk,nzvc)
+process(reset,Clock,nzvc)
 begin
 		if reset= '1' then
 					carry <= '0';
 		else
-					if rising_edge(clk) then
+					if rising_edge(Clock) then
 							  carry <= nzvc(0);
 					end if;
 		end if;

@@ -43,7 +43,7 @@ ARCHITECTURE behavior OF Tb_pSR IS
     PORT(
          nzvc : IN  std_logic_vector(3 downto 0);
          reset : IN  std_logic;
-         clk : IN  std_logic;
+         Clock : IN  std_logic;
          carry : OUT  std_logic
         );
     END COMPONENT;
@@ -52,13 +52,13 @@ ARCHITECTURE behavior OF Tb_pSR IS
    --Inputs
    signal nzvc : std_logic_vector(3 downto 0) := (others => '0');
    signal reset : std_logic := '0';
-   signal clk : std_logic := '0';
+   signal Clock : std_logic := '0';
 
  	--Outputs
    signal carry : std_logic;
 
    -- Clock period definitions
-   constant clk_period : time := 10 ns;
+   constant Clock_period : time := 10 ns;
  
 BEGIN
  
@@ -66,17 +66,17 @@ BEGIN
    uut: pSR PORT MAP (
           nzvc => nzvc,
           reset => reset,
-          clk => clk,
+          Clock => Clock,
           carry => carry
         );
 
    -- Clock process definitions
-   clk_process :process
+   Clock_process :process
    begin
-		clk <= '0';
-		wait for clk_period/2;
-		clk <= '1';
-		wait for clk_period/2;
+		Clock <= '0';
+		wait for Clock_period/2;
+		Clock <= '1';
+		wait for Clock_period/2;
    end process;
  
 

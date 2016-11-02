@@ -1,0 +1,57 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Juan/Documents/Procesador32bits/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Juan/Documents/Procesador32bits/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Juan/Documents/Procesador32bits/Sumador.vhd" in Library work.
+Architecture behavioral of Entity sumador is up to date.
+Compiling vhdl file "C:/Users/Juan/Documents/Procesador32bits/NPC.vhd" in Library work.
+Architecture behavioral of Entity npc is up to date.
+Compiling vhdl file "C:/Users/Juan/Documents/Procesador32bits/PC.vhd" in Library work.
+Architecture behavioral of Entity pc is up to date.
+Compiling vhdl file "C:/Users/Juan/Documents/Procesador32bits/instructionMemory.vhd" in Library work.
+Architecture arqinstructionmemory of Entity instructionmemory is up to date.
+Compiling vhdl file "C:/Users/Juan/Documents/Procesador32bits/UC.vhd" in Library work.
+Architecture behavioral of Entity uc is up to date.
+Compiling vhdl file "C:/Users/Juan/Documents/Procesador32bits/RF.vhd" in Library work.
+Architecture behavioral of Entity rf is up to date.
+Compiling vhdl file "C:/Users/Juan/Documents/Procesador32bits/MUX.vhd" in Library work.
+Architecture behavioral of Entity mux is up to date.
+Compiling vhdl file "C:/Users/Juan/Documents/Procesador32bits/SEU.vhd" in Library work.
+Architecture behavioral of Entity seu is up to date.
+Compiling vhdl file "C:/Users/Juan/Documents/Procesador32bits/psr_modifier.vhd" in Library work.
+Architecture behavioral of Entity psr_modifier is up to date.
+Compiling vhdl file "C:/Users/Juan/Documents/Procesador32bits/psr.vhd" in Library work.
+Architecture behavioral of Entity psr is up to date.
+Compiling vhdl file "C:/Users/Juan/Documents/Procesador32bits/ALU.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "C:/Users/Juan/Documents/Procesador32bits/procesador.vhd" in Library work.
+Entity <procesador_amd_full> compiled.
+ERROR:HDLParsers:850 - "C:/Users/Juan/Documents/Procesador32bits/procesador.vhd" Line 212. Formal port Clock does not exist in Component 'pSR'.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.35 secs
+ 
+--> 
+
+Total memory usage is 273580 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
