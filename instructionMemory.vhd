@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    00:10:46 10/17/2016 
+-- Create Date:    16:40:45 04/25/2016 
 -- Design Name: 
 -- Module Name:    instructionMemory - Behavioral 
 -- Project Name: 
@@ -48,7 +48,7 @@ architecture arqInstructionMemory of instructionMemory is
 		return temp_mem;
 	end function;
 	
-	signal instructions : rom_type := InitRomFromFile("instruccioneProfe1.txt");
+	signal instructions : rom_type := InitRomFromFile("instruccion.txt");
 	
 begin
 --reset,address, instructions)

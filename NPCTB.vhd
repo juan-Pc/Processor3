@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:    00:10:46 10/17/2016 
+-- Create Date:   23:45:15 04/22/2016
 -- Design Name:   
 -- Module Name:   D:/Biblioteca/Documents/Procesador/Procesador32/NPCTB.vhd
 -- Project Name:  Procesador

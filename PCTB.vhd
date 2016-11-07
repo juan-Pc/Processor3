@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:    00:10:46 10/17/2016 
+-- Create Date:   15:02:31 04/23/2016
 -- Design Name:   
 -- Module Name:   D:/Biblioteca/Documents/Procesador/Procesador32/PCTB.vhd
 -- Project Name:  Procesador

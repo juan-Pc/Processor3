@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    00:10:46 10/17/2016 
+-- Create Date:    18:28:46 17/10/2016 
 -- Design Name: 
 -- Module Name:    ALU - Behavioral 
 -- Project Name: 
@@ -33,6 +33,7 @@ use IEEE.STD_LOGIC_unsigned.ALL;
 entity ALU is
 	Port ( Crs1 : in  STD_LOGIC_VECTOR (31 downto 0);
           Crs2 : in  STD_LOGIC_VECTOR (31 downto 0);
+			 Carry : in STD_LOGIC;
           ALU_Op : in STD_LOGIC_VECTOR (5 downto 0);
 			 ALU_Out : out STD_LOGIC_VECTOR (31 downto 0));
 end ALU;
@@ -41,7 +42,7 @@ architecture Behavioral of ALU is
 
 begin
 
-process(Crs1,Crs2,ALU_Op)
+process(Crs1,Crs2,ALU_Op,Carry)
 		begin
 			case (ALU_Op) is 
 				when "000000" => --add
@@ -49,17 +50,17 @@ process(Crs1,Crs2,ALU_Op)
 				when "010000" => --addcc
 							ALU_Out <= Crs1 + Crs2;
 				when "011000" => --addX
-							ALU_Out <= Crs1 + Crs2;		
+							ALU_Out <= Crs1 + Crs2+Carry;		
 				when "001000" => --addXcc
-							ALU_Out <= Crs1 + Crs2;								
+							ALU_Out <= Crs1 + Crs2+Carry;								
 				when "000100" => --sub
 							ALU_Out <= Crs1 - Crs2; 
 				when "010100" => --subcc
 							ALU_Out <= Crs1 - Crs2;
 				when "001100" => --subX
-							ALU_Out <= Crs1 - Crs2;
+							ALU_Out <= Crs1 - Crs2-Carry;
 				when "011100" => --subXcc
-							ALU_Out <= Crs1 - Crs2;							
+							ALU_Out <= Crs1 - Crs2-Carry;							
 				when "000010" => --or
 							ALU_Out <= Crs1 or Crs2; 
 				when "010010" => --orcc

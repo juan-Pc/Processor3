@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:    00:10:46 10/17/2016 
+-- Create Date:   18:46:12 04/25/2016
 -- Design Name:   
 -- Module Name:   D:/Biblioteca/Documents/Procesador/Procesador32/MUXTB.vhd
 -- Project Name:  Procesador
