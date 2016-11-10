@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    18:21:35 11/05/2016 
+-- Create Date:    19:06:08 11/05/2016 
 -- Design Name: 
--- Module Name:    procesador - Behavioral 
+-- Module Name:    procesador_intento - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,14 +29,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity procesador_4final is
+entity procesador_intento is
 Port ( clk : in  STD_LOGIC;
            reset : in  STD_LOGIC;
            salida : out  STD_LOGIC_VECTOR (31 downto 0));
-end procesador_4final;
+end procesador_intento;
 
-architecture Behavioral of procesador_4final is
-
+architecture Behavioral of procesador_intento is
 
 COMPONENT sumadOR
 	PORT(
@@ -252,9 +251,4 @@ salida <= aluResult;
 
 
 end Behavioral;
-
-
-
-
-
 

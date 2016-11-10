@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    18:06:54 11/05/2016 
+-- Create Date:    18:05:33 11/05/2016 
 -- Design Name: 
--- Module Name:    psr - Behavioral 
+-- Module Name:    seu - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,37 +29,28 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity psr is
-    Port ( nzvc : in  STD_LOGIC_VECTOR (3 downto 0);
-			  clk : in  STD_LOGIC;
-			  reset : in  STD_LOGIC;
-           ncwp : in  STD_LOGIC;
-           carry : out  STD_LOGIC;
-           cwp : out  STD_LOGIC);
-end psr;
+entity sEU is
+    Port ( i13bits : in  STD_LOGIC_VECTOR (12 downto 0);
+           salida : out  STD_LOGIC_VECTOR (31 downto 0));
+end sEU;
 
-architecture arqPsr of psr is
+architecture Behavioral of sEU is
 
 begin
-	process(clk)
-	begin
-		if(rising_edge(clk))then
-			if(reset = '1') then
-				cwp <= '0';
-				carry <= '0';
-			else
-				if ncwp = '1' then
-					cwp <= '1';
-				else
-					cwp <= '0';
-				end if;
-				if nzvc(0) = '1' then
-					carry <= '1';
-				else 
-					carry <= '0';
-				end if;
-			end if;
-		end if;
-	end process;
-end arqPsr;
+process(i13bits)
+begin
+
+if(i13bits(12) = '1')then--Verifica si es numero ingresado es negativo
+	salida(12 downto 0) <= i13bits;
+	salida(31 downto 13) <= (others=>'1');--Complementa el numero con unos por ser negativo
+
+else
+	salida(12 downto 0) <= i13bits;
+	salida(31 downto 13) <= (others=>'0');--Complementa el numero con ceros por no ser numero negativo
+
+end if;
+
+end process; 
+
+end Behavioral;
 

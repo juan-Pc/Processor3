@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\Juan\Documents\Procesador32bits\ProcesadorTB_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Juan/Documents/Procesador32bits/ProcesadorTB_isim_beh.wdb 
+Running: C:\Users\Juan\Documents\PROCESADOR 4\PROCESADOR4\Tb_procesadorIntento_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Juan/Documents/PROCESADOR 4/PROCESADOR4/Tb_procesadorIntento_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -10,9 +10,13 @@ Time resolution is 1 ps
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
-at 0 ps, Instance /procesadortb/uut/Inst_Sumador/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-at 0 ps, Instance /procesadortb/uut/Inst_instructionMemory/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 0 ps, Instance /procesadortb/uut/Inst_RF/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 0 ps, Instance /procesadortb/uut/Inst_RF/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-at 0 ps, Instance /procesadortb/uut/Inst_RF/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 0 ps, Instance /tb_procesadorintento/uut/Inst_sumadOR/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /tb_procesadorintento/uut/Inst_iM/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 0 ps, Instance /tb_procesadorintento/uut/Inst_rF/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 0 ps, Instance /tb_procesadorintento/uut/Inst_rF/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 0 ps, Instance /tb_procesadorintento/uut/Inst_rF/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 Finished circuit initialization process.
+ERROR: Index 40 out of bound 0 to 39. 
+ERROR: In process im.vhd:62 
+ 
+INFO: Simulator is stopped.

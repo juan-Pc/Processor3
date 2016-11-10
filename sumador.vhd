@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    18:06:54 11/05/2016 
+-- Create Date:    17:59:54 11/05/2016 
 -- Design Name: 
--- Module Name:    psr - Behavioral 
+-- Module Name:    sumador - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -19,6 +19,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -29,37 +30,24 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity psr is
-    Port ( nzvc : in  STD_LOGIC_VECTOR (3 downto 0);
-			  clk : in  STD_LOGIC;
-			  reset : in  STD_LOGIC;
-           ncwp : in  STD_LOGIC;
-           carry : out  STD_LOGIC;
-           cwp : out  STD_LOGIC);
-end psr;
+entity sumadOR is
+ Port ( suma1 : in  STD_LOGIC_VECTOR (31 downto 0);
+        suma2 : in  STD_LOGIC_VECTOR (31 downto 0);
+        salida: out  STD_LOGIC_VECTOR (31 downto 0));
+end sumadOR;
 
-architecture arqPsr of psr is
+architecture Behavioral of sumadOR is
 
 begin
-	process(clk)
+	process(suma1,suma2)
 	begin
-		if(rising_edge(clk))then
-			if(reset = '1') then
-				cwp <= '0';
-				carry <= '0';
-			else
-				if ncwp = '1' then
-					cwp <= '1';
-				else
-					cwp <= '0';
-				end if;
-				if nzvc(0) = '1' then
-					carry <= '1';
-				else 
-					carry <= '0';
-				end if;
-			end if;
-		end if;
-	end process;
-end arqPsr;
+		salida<= suma1+ suma2; 
+	end process; 
+
+
+
+
+end Behavioral;
+
+
 

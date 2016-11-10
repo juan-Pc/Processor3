@@ -1,0 +1,56 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/sumador.vhd" in Library work.
+Architecture behavioral of Entity sumador is up to date.
+Compiling vhdl file "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/npc.vhd" in Library work.
+Architecture behavioral of Entity npc is up to date.
+Compiling vhdl file "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/im.vhd" in Library work.
+Architecture behavioral of Entity im is up to date.
+Compiling vhdl file "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/uc.vhd" in Library work.
+Architecture behavioral of Entity uc is up to date.
+Compiling vhdl file "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/wm.vhd" in Library work.
+Architecture arqwm of Entity wm is up to date.
+Compiling vhdl file "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/rf.vhd" in Library work.
+Architecture behavioral of Entity rf is up to date.
+Compiling vhdl file "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/mux.vhd" in Library work.
+Architecture behavioral of Entity mux is up to date.
+Compiling vhdl file "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/seu.vhd" in Library work.
+Architecture behavioral of Entity seu is up to date.
+Compiling vhdl file "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/psrmodifier.vhd" in Library work.
+Architecture behavioral of Entity psr_modifier is up to date.
+Compiling vhdl file "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/psr.vhd" in Library work.
+Architecture arqpsr of Entity psr is up to date.
+Compiling vhdl file "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/alu.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/procesador.vhd" in Library work.
+Architecture behavioral of Entity procesador_4final is up to date.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> 
+
+Total memory usage is 215596 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

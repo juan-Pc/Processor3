@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/procesador_4final.xst" -ofn "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/procesador_4final.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "procesador_4final.ngc" procesador_4final.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o procesador_4final_map.ncd procesador_4final.ngd procesador_4final.pcf 
+xst -intstyle ise -ifn "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/procesador_4final.xst" -ofn "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/procesador_4final.syr" 

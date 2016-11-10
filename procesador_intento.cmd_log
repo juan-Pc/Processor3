@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/procesador_intento.xst" -ofn "D:/Desktop/PROCESADOR NUEVO/PROCESADOR4/procesador_intento.syr" 
